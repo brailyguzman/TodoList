@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Sora&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+    --title-fonts: 'Aclonica', sans-serif;
+    --main-fonts: 'Sora', sans-serif;
+    --color-1: #e63946;
+    --color-2: #1d3557;
+    --color-3: #000;
+    --color-4: #FFF;
+}
+
+/* Root */
+
+#root {
+    text-align: center;
+}
+
+/* Reused Styles */
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Body */
+
+body {
+    background-color: var(--color-3);
+}
+
+/* Header */
+
+.header {
+    background-color: var(--color-1);
+    font-family: var(--title-fonts) !important;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Form */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-2);
+}
+
+.todo-form {
+    padding: 25px;
+}
+
+.todo-form input {
+    padding: 10px;
+    outline: none;
+    transition: opacity 0.5s;
+    border: 3px solid var(--color-3);
+    border-radius: 5px;
+    font-family: var(--main-fonts);
+    height: 60px;
+    font-size: 20px;
+}
+
+.todo-form input[type="text"]#item-text {
+    width: 350px;
+
+}
+
+.todo-form input[type="submit"]#add-item {
+    background-color: var(--color-1);
+    width: 100px;
+    font-weight: bold;
+}
+
+.todo-form input:hover {
+    opacity: 0.85;
+}
+
+/* TodoList */
+
+.todos-container {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.listElement  {
+    background-color: #e63946;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+li input {
+    font-family: var(--main-fonts);
+    border: 2px solid var(--color-4);
+    padding: 10px;
+    line-height: 20px;
+    outline: none;
+}
+
+.todo-text {
+    width: 355px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.todo-button {
+    background-color: var(--color-3);
+    cursor: pointer;
+    width: 40px;
+}
+
+.completion-btn {
+    color: #00FF00;
+}
+
+.remove-btn {
+    color: #FF0000;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+/* Footer */
+
+footer {
+    font-family: var(--main-fonts);
+    position: fixed;
+    font-size: 25px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-3);
+    color: var(--color-4);
+    padding: 20px;
+    color: var(--color-2);
+    text-shadow: #f1faee;
+}
+
+footer a {
+    color: var(--color-1);
+}
+
+/* Conditional Styles */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+#noItemsText{
+    color: var(--color-4);
+    font-family: var(--main-fonts);
+    font-size: 25px;
+}
+
+/* Tablet Responsive Styles*/
+
+@media screen and (max-width: 768px) {
+    /* Header */
+
+    .header {
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    /* Form */
+    .todo-form {
+        padding: 15px;
+    }
+
+    .todo-form input {
+        font-size: 15px;
+    }
+
+    .todo-form input[type="text"]#item-text {
+        width: 300px;
+    }
+
+    .todo-form input[type="submit"]#add-item {
+        width: 100px;
+    }
+
+    .todo-text {
+        width: 290px;
+    }
+
+    .todo-button {
+        width: 50px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Responsive Styles */
+
+@media screen and (max-width: 480px) {
+    .todo-form input {
+        font-size: 13px;
+    }
+
+    .todo-form input[type="text"]#item-text {
+        width: 250px;
+    }
+
+    .todo-form input[type="submit"]#add-item {
+        width: 100px;
+    }
+
+    .todo-text {
+        width: 240px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
+
+/* Smaller Screen Mobile Responsive Styles */
+
+@media screen and (max-width: 375px) {
+    .todo-form input {
+        font-size: 12px;
+    }
+
+    .todo-form input[type="text"]#item-text {
+        width: 200px;
+    }
+
+    .todo-form input[type="submit"]#add-item {
+        width: 50px;
+    }
+
+    .todo-text {
+        width: 160px;
+    }
+
+    .todo-button {
+        width: 40px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
