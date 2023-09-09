@@ -99,6 +99,8 @@ main {
 .todos-container {
     display: inline-flex;
     justify-content: center;
+    overflow-y: auto;
+    max-height: 520px;
 }
 
 .listElement  {
