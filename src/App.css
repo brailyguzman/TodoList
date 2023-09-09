@@ -210,6 +210,11 @@ footer a {
     footer {
         font-size: 20px;
     }
+
+    #noItemsText{
+        font-size: 20px;
+    }
+
 }
 
 /* Mobile Responsive Styles */
@@ -233,6 +238,10 @@ footer a {
 
     footer {
         font-size: 20px;
+    }
+
+    #noItemsText{
+        font-size: 15px;
     }
 }
 
